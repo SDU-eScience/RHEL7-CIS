@@ -6,7 +6,7 @@ rhel7cis_notauto: false
 rhel7cis_section1: true
 rhel7cis_section2: true
 rhel7cis_section3: true
-rhel7cis_section4: true
+rhel7cis_section4: false # audit and logging
 rhel7cis_section5: true
 rhel7cis_section6: true
 
@@ -24,26 +24,26 @@ rhel7cis_rule_1_1_1_4: true
 rhel7cis_rule_1_1_1_5: true
 rhel7cis_rule_1_1_1_6: true
 rhel7cis_rule_1_1_1_7: true
-rhel7cis_rule_1_1_1_8: true
-rhel7cis_rule_1_1_2: true
-rhel7cis_rule_1_1_3: true
-rhel7cis_rule_1_1_4: true
-rhel7cis_rule_1_1_5: true
+rhel7cis_rule_1_1_1_8: false # vfat
+rhel7cis_rule_1_1_2: false # /tmp
+rhel7cis_rule_1_1_3: false # /tmp
+rhel7cis_rule_1_1_4: false # /tmp
+rhel7cis_rule_1_1_5: false # /tmp
 rhel7cis_rule_1_1_6: true
 rhel7cis_rule_1_1_7: true
-rhel7cis_rule_1_1_8: true
-rhel7cis_rule_1_1_9: true
-rhel7cis_rule_1_1_10: true
+rhel7cis_rule_1_1_8: false # /var/tmp
+rhel7cis_rule_1_1_9: false # /var/tmp
+rhel7cis_rule_1_1_10: false # /var/tmp
 rhel7cis_rule_1_1_11: true
 rhel7cis_rule_1_1_12: true
 rhel7cis_rule_1_1_13: true
-rhel7cis_rule_1_1_14: true
+rhel7cis_rule_1_1_14: false # /home
 rhel7cis_rule_1_1_15: true
 rhel7cis_rule_1_1_16: true
 rhel7cis_rule_1_1_17: true
-rhel7cis_rule_1_1_18: true
-rhel7cis_rule_1_1_19: true
-rhel7cis_rule_1_1_20: true
+rhel7cis_rule_1_1_18: false # not relevant
+rhel7cis_rule_1_1_19: false # not relevant
+rhel7cis_rule_1_1_20: false # not relevant
 rhel7cis_rule_1_1_21: true
 rhel7cis_rule_1_1_22: true
 rhel7cis_rule_1_2_1: true
@@ -51,8 +51,8 @@ rhel7cis_rule_1_2_2: true
 rhel7cis_rule_1_2_3: true
 rhel7cis_rule_1_2_4: true
 rhel7cis_rule_1_2_5: true
-rhel7cis_rule_1_3_1: true
-rhel7cis_rule_1_3_2: true
+rhel7cis_rule_1_3_1: false # aide
+rhel7cis_rule_1_3_2: false # aide
 rhel7cis_rule_1_4_1: true
 rhel7cis_rule_1_4_2: true
 rhel7cis_rule_1_4_3: true
@@ -66,9 +66,9 @@ rhel7cis_rule_1_6_1_3: true
 rhel7cis_rule_1_6_1_4: true
 rhel7cis_rule_1_6_1_5: true
 rhel7cis_rule_1_6_2: true
-rhel7cis_rule_1_7_1_1: true
-rhel7cis_rule_1_7_1_2: true
-rhel7cis_rule_1_7_1_3: true
+rhel7cis_rule_1_7_1_1: false # motd
+rhel7cis_rule_1_7_1_2: false # issue
+rhel7cis_rule_1_7_1_3: false # issue.net
 rhel7cis_rule_1_7_1_4: true
 rhel7cis_rule_1_7_1_5: true
 rhel7cis_rule_1_7_1_6: true
@@ -83,9 +83,9 @@ rhel7cis_rule_2_1_4: true
 rhel7cis_rule_2_1_5: true
 rhel7cis_rule_2_1_6: true
 rhel7cis_rule_2_1_7: true
-rhel7cis_rule_2_2_1_1: true
-rhel7cis_rule_2_2_1_2: true
-rhel7cis_rule_2_2_1_3: true
+rhel7cis_rule_2_2_1_1: false # chrony
+rhel7cis_rule_2_2_1_2: false # chrony
+rhel7cis_rule_2_2_1_3: false # chrony
 rhel7cis_rule_2_2_2: true
 rhel7cis_rule_2_2_3: true
 rhel7cis_rule_2_2_4: true
@@ -125,21 +125,21 @@ rhel7cis_rule_3_2_7: true
 rhel7cis_rule_3_2_8: true
 rhel7cis_rule_3_3_1: true
 rhel7cis_rule_3_3_2: true
-rhel7cis_rule_3_3_3: true
+rhel7cis_rule_3_3_3: false # ipv6 grub
 rhel7cis_rule_3_4_1: true
-rhel7cis_rule_3_4_2: true
-rhel7cis_rule_3_4_3: true
+rhel7cis_rule_3_4_2: false # hosts.allow
+rhel7cis_rule_3_4_3: false # hosts.deny
 rhel7cis_rule_3_4_4: true
 rhel7cis_rule_3_4_5: true
 rhel7cis_rule_3_5_1: true
 rhel7cis_rule_3_5_2: true
 rhel7cis_rule_3_5_3: true
 rhel7cis_rule_3_5_4: true
-rhel7cis_rule_3_6_1: true
-rhel7cis_rule_3_6_2: true
-rhel7cis_rule_3_6_3: true
-rhel7cis_rule_3_6_4: true
-rhel7cis_rule_3_6_5: true
+rhel7cis_rule_3_6_1: false # firewall
+rhel7cis_rule_3_6_2: false # firewall
+rhel7cis_rule_3_6_3: false # firewall
+rhel7cis_rule_3_6_4: false # firewall
+rhel7cis_rule_3_6_5: false # firewall
 
 # Section 4 rules
 rhel7cis_rule_4_1_1_1: true
@@ -291,7 +291,7 @@ rhel7cis_set_boot_pass: false
 rhel7cis_is_router: false
 
 # IPv6 required
-rhel7cis_ipv6_required: true
+rhel7cis_ipv6_required: false
 
 # AIDE
 rhel7cis_config_aide: true
@@ -340,7 +340,7 @@ rhel7cis_host_allow:
     - "172.16.0.0/255.240.0.0"
     - "192.168.0.0/255.255.0.0"
 
-rhel7cis_firewall: firewalld
+rhel7cis_firewall: ufw
 #rhel7cis_firewall: iptables
 
 rhel7cis_firewall_services:

@@ -265,6 +265,8 @@
   register: var_mounted
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_1_1_6
   tags:
@@ -279,6 +281,8 @@
   register: var_tmp_mounted
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_1_1_7
   tags:
@@ -315,6 +319,8 @@
   register: var_log_mounted
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_1_1_11
   tags:
@@ -329,6 +335,8 @@
   register: var_log_audit_mounted
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_1_1_12
   tags:
@@ -343,6 +351,8 @@
   register: home_mounted
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_1_1_13
   tags:
@@ -456,6 +466,8 @@
   register: yum_configured
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_1_2_1
   tags:
@@ -599,7 +611,7 @@
 
 - name: "SCORED | 1.4.1 | PATCH | Ensure permissions on bootloader config are configured"
   stat:
-      path: /etc/grub2.cfg
+      path: /etc/grub2-efi.cfg
   register: grub_cfg
   when:
       - rhel7cis_rule_1_4_1
@@ -703,7 +715,7 @@
 - name: "SCORED | 1.5.1 | PATCH | Ensure core dumps are restricted"
   sysctl:
       name: fs.suid_dumpable
-      value: 0
+      value: "0"
       state: present
       reload: yes
       sysctl_set: yes
@@ -731,7 +743,7 @@
 - name: "SCORED | 1.5.3 | PATCH | Ensure address space layout randomization (ASLR) is enabled"
   sysctl:
       name: kernel.randomize_va_space
-      value: 2
+      value: "2"
       state: present
       reload: yes
       sysctl_set: yes
@@ -960,6 +972,7 @@
   yum:
       name: "*"
       state: latest
+  ignore_errors: true
   when:
       - rhel7cis_rule_1_8
   tags:

@@ -437,7 +437,7 @@
       - patch
       - rule_5.3.1
 
-- name: "SCORED | 5.3.2 | PATCH | Ensure lockout for failed password attempts is configured"
+- name: "SCORED | 5.3.2 | PATCH | Ensure lockout for failed password attempts is configured | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -449,7 +449,7 @@
       - rule_5.3.2
       - notimplemented
 
-- name: "SCORED | 5.3.3 | PATCH | Ensure password reuse is limited"
+- name: "SCORED | 5.3.3 | PATCH | Ensure password reuse is limited | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -515,7 +515,7 @@
       - patch
       - rule_5.4.1.3
 
-- name: "SCORED | 5.4.1.4 | PATCH | Ensure inactive password lock is 30 days or less"
+- name: "SCORED | 5.4.1.4 | PATCH | Ensure inactive password lock is 30 days or less | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -605,7 +605,7 @@
       - patch
       - rule_5.4.4
 
-- name: "NOTSCORED | 5.5 | PATCH | Ensure root login is restricted to system console"
+- name: "NOTSCORED | 5.5 | PATCH | Ensure root login is restricted to system console | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   tags:

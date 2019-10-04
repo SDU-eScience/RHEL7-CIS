@@ -1,7 +1,7 @@
 - name: "SCORED | 3.1.1 | PATCH | Ensure IP forwarding is disabled"
   sysctl:
       name: net.ipv4.ip_forward
-      value: 0
+      value: "0"
       state: present
       reload: yes
       ignoreerrors: yes
@@ -25,8 +25,8 @@
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.send_redirects, value: 0 }
-      - { name: net.ipv4.conf.default.send_redirects, value: 0 }
+      - { name: net.ipv4.conf.all.send_redirects, value: "0" }
+      - { name: net.ipv4.conf.default.send_redirects, value: "0" }
   notify:
       - sysctl flush ipv4 route table
   when:
@@ -47,8 +47,8 @@
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.accept_source_route, value: 0 }
-      - { name: net.ipv4.conf.default.accept_source_route, value: 0 }
+      - { name: net.ipv4.conf.all.accept_source_route, value: "0" }
+      - { name: net.ipv4.conf.default.accept_source_route, value: "0" }
   notify:
       - sysctl flush ipv4 route table
   when:
@@ -68,8 +68,8 @@
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.accept_redirects, value: 0 }
-      - { name: net.ipv4.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.all.accept_redirects, value: "0" }
+      - { name: net.ipv4.conf.default.accept_redirects, value: "0" }
   notify:
       - sysctl flush ipv4 route table
   when:
@@ -89,8 +89,8 @@
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.secure_redirects, value: 0 }
-      - { name: net.ipv4.conf.default.secure_redirects, value: 0 }
+      - { name: net.ipv4.conf.all.secure_redirects, value: "0" }
+      - { name: net.ipv4.conf.default.secure_redirects, value: "0" }
   notify:
       - sysctl flush ipv4 route table
   when:
@@ -110,8 +110,8 @@
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.log_martians, value: 1 }
-      - { name: net.ipv4.conf.default.log_martians, value: 1 }
+      - { name: net.ipv4.conf.all.log_martians, value: "1" }
+      - { name: net.ipv4.conf.default.log_martians, value: "1" }
   notify:
       - sysctl flush ipv4 route table
   when:
@@ -125,7 +125,7 @@
 - name: "SCORED | 3.2.5 | PATCH | Ensure broadcast ICMP requests are ignored"
   sysctl:
       name: net.ipv4.icmp_echo_ignore_broadcasts
-      value: 1
+      value: "1"
       state: present
       reload: yes
       ignoreerrors: yes
@@ -142,7 +142,7 @@
 - name: "SCORED | 3.2.6 | PATCH | Ensure bogus ICMP responses are ignored"
   sysctl:
       name: net.ipv4.icmp_ignore_bogus_error_responses
-      value: 1
+      value: "1"
       state: present
       reload: yes
       ignoreerrors: yes
@@ -165,8 +165,8 @@
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.rp_filter, value: 1 }
-      - { name: net.ipv4.conf.default.rp_filter, value: 1 }
+      - { name: net.ipv4.conf.all.rp_filter, value: "1" }
+      - { name: net.ipv4.conf.default.rp_filter, value: "1" }
   notify:
       - sysctl flush ipv4 route table
   when:
@@ -180,7 +180,7 @@
 - name: "SCORED | 3.2.8 | PATCH | Ensure TCP SYN Cookies is enabled"
   sysctl:
       name: net.ipv4.tcp_syncookies
-      value: 1
+      value: "1"
       state: present
       reload: yes
       ignoreerrors: yes
@@ -441,7 +441,7 @@
       - patch
       - rule_3.6.2
 
-- name: "SCORED | 3.6.2 | PATCH | Ensure default deny firewall policy"
+- name: "SCORED | 3.6.2 | PATCH | Ensure default deny firewall policy | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -453,7 +453,7 @@
       - rule_3.6.2
       - notimplemented
 
-- name: "SCORED | 3.6.3 | PATCH | Ensure loopback traffic is configured"
+- name: "SCORED | 3.6.3 | PATCH | Ensure loopback traffic is configured | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -465,7 +465,7 @@
       - rule_3.6.3
       - notimplemented
 
-- name: "NOTSCORED | 3.6.4 | PATCH | Ensure outbound and established connections are configured"
+- name: "NOTSCORED | 3.6.4 | PATCH | Ensure outbound and established connections are configured | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -494,7 +494,7 @@
       - patch
       - rule_3.6.5
 
-- name: "SCORED | 3.6.5 | PATCH | Ensure firewall rules exist for all open ports"
+- name: "SCORED | 3.6.5 | PATCH | Ensure firewall rules exist for all open ports | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -506,7 +506,7 @@
       - rule_3.6.5
       - notimplemented
 
-- name: "NOTSCORED | 3.7 | PATCH | Ensure wireless interfaces are disabled"
+- name: "NOTSCORED | 3.7 | PATCH | Ensure wireless interfaces are disabled | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   tags:

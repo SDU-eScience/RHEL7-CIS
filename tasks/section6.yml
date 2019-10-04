@@ -1,4 +1,4 @@
-- name: "NOTSCORED | 6.1.1 | PATCH | Audit system file permissions"
+- name: "NOTSCORED | 6.1.1 | PATCH | Audit system file permissions | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -121,7 +121,7 @@
       - patch
       - rule_6.1.9
 
-- name: "SCORED | 6.1.10 | PATCH | Ensure no world writable files exist"
+- name: "SCORED | 6.1.10 | PATCH | Ensure no world writable files exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -133,7 +133,7 @@
       - rule_6.1.10
       - notimplemented
 
-- name: "SCORED | 6.1.11 | PATCH | Ensure no unowned files or directories exist"
+- name: "SCORED | 6.1.11 | PATCH | Ensure no unowned files or directories exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -145,7 +145,7 @@
       - rule_6.1.11
       - notimplemented
 
-- name: "SCORED | 6.1.12 | PATCH | Ensure no ungrouped files or directories exist"
+- name: "SCORED | 6.1.12 | PATCH | Ensure no ungrouped files or directories exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -157,7 +157,7 @@
       - rule_6.1.12
       - notimplemented
 
-- name: "NOTSCORED | 6.1.13 | PATCH | Audit SUID executables"
+- name: "NOTSCORED | 6.1.13 | PATCH | Audit SUID executables | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -169,7 +169,7 @@
       - rule_6.1.13
       - notimplemented
 
-- name: "NOTSCORED | 6.1.14 | PATCH | Audit SGID executables"
+- name: "NOTSCORED | 6.1.14 | PATCH | Audit SGID executables | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -199,6 +199,8 @@
   command: sed -i '/^+/ d' /etc/passwd
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_6_2_2
   tags:
@@ -212,6 +214,8 @@
   command: sed -i '/^+/ d' /etc/shadow
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_6_2_3
   tags:
@@ -225,6 +229,8 @@
   command: sed -i '/^+/ d' /etc/group
   changed_when: no
   failed_when: no
+  args:
+      warn: false
   when:
       - rhel7cis_rule_6_2_4
   tags:
@@ -248,7 +254,7 @@
       - patch
       - rule_6.2.5
 
-- name: "SCORED | 6.2.6 | PATCH | Ensure root PATH Integrity"
+- name: "SCORED | 6.2.6 | PATCH | Ensure root PATH Integrity | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -260,7 +266,7 @@
       - rule_6.2.6
       - notimplemented
 
-- name: "SCORED | 6.2.7 | PATCH | Ensure all users' home directories exist"
+- name: "SCORED | 6.2.7 | PATCH | Ensure all users' home directories exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -272,7 +278,7 @@
       - rule_6.2.7
       - notimplemented
 
-- name: "SCORED | 6.2.8 | PATCH | Ensure users' home directories permissions are 750 or more restrictive"
+- name: "SCORED | 6.2.8 | PATCH | Ensure users' home directories permissions are 750 or more restrictive | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -284,7 +290,7 @@
       - rule_6.2.8
       - notimplemented
 
-- name: "SCORED | 6.2.9 | PATCH | Ensure users own their home directories"
+- name: "SCORED | 6.2.9 | PATCH | Ensure users own their home directories | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -296,7 +302,7 @@
       - rule_6.2.9
       - notimplemented
 
-- name: "SCORED | 6.2.10 | PATCH | Ensure users' dot files are not group or world writable"
+- name: "SCORED | 6.2.10 | PATCH | Ensure users' dot files are not group or world writable | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -358,7 +364,7 @@
       - patch
       - rule_6.2.14
 
-- name: "SCORED | 6.2.15 | PATCH | Ensure all groups in /etc/passwd exist in /etc/group"
+- name: "SCORED | 6.2.15 | PATCH | Ensure all groups in /etc/passwd exist in /etc/group | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -370,7 +376,7 @@
       - rule_6.2.15
       - notimplemented
 
-- name: "SCORED | 6.2.16 | PATCH | Ensure no duplicate UIDs exist"
+- name: "SCORED | 6.2.16 | PATCH | Ensure no duplicate UIDs exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -382,7 +388,7 @@
       - rule_6.2.16
       - notimplemented
 
-- name: "SCORED | 6.2.17 | PATCH | Ensure no duplicate GIDs exist"
+- name: "SCORED | 6.2.17 | PATCH | Ensure no duplicate GIDs exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -394,7 +400,7 @@
       - rule_6.2.17
       - notimplemented
 
-- name: "SCORED | 6.2.18 | PATCH | Ensure no duplicate user names exist"
+- name: "SCORED | 6.2.18 | PATCH | Ensure no duplicate user names exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -406,7 +412,7 @@
       - rule_6.2.18
       - notimplemented
 
-- name: "SCORED | 6.2.19 | PATCH | Ensure no duplicate group names exist"
+- name: "SCORED | 6.2.19 | PATCH | Ensure no duplicate group names exist | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:

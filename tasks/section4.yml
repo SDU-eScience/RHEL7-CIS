@@ -353,7 +353,7 @@
       - patch
       - rule_4.2.3
 
-- name: "SCORED | 4.2.1.1 | PATCH | Ensure rsyslog Service is enabled"
+- name: "SCORED | 4.2.1.1 | PATCH | Ensure rsyslog Service is enabled | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -365,7 +365,7 @@
       - rule_4.2.1.1
       - notimplemented
 
-- name: "NOTSCORED | 4.2.1.2 | PATCH | Ensure logging is configured"
+- name: "NOTSCORED | 4.2.1.2 | PATCH | Ensure logging is configured | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -390,7 +390,7 @@
       - patch
       - rule_4.2.1.3
 
-- name: "SCORED | 4.2.1.4 | PATCH | Ensure rsyslog is configured to send logs to a remote log host"
+- name: "SCORED | 4.2.1.4 | PATCH | Ensure rsyslog is configured to send logs to a remote log host | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -402,7 +402,7 @@
       - rule_4.2.1.4
       - notimplemented
 
-- name: "NOTSCORED | 4.2.1.5 | PATCH | Ensure remote rsyslog messages are only accepted on designated log hosts."
+- name: "NOTSCORED | 4.2.1.5 | PATCH | Ensure remote rsyslog messages are only accepted on designated log hosts. | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -414,7 +414,7 @@
       - rule_4.2.1.5
       - notimplemented
 
-- name: "NOTSCORED | 4.2.1.5 | PATCH | Ensure remote rsyslog messages are only accepted on designated log hosts."
+- name: "NOTSCORED | 4.2.1.5 | PATCH | Ensure remote rsyslog messages are only accepted on designated log hosts. | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -426,7 +426,7 @@
       - rule_4.2.1.5
       - notimplemented
 
-- name: "SCORED | 4.2.2.1 | PATCH | Ensure syslog-ng service is enabled"
+- name: "SCORED | 4.2.2.1 | PATCH | Ensure syslog-ng service is enabled | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -438,7 +438,7 @@
       - rule_4.2.2.1
       - notimplemented
 
-- name: "NOTSCORED | 4.2.2.2 | PATCH | Ensure logging is configured"
+- name: "NOTSCORED | 4.2.2.2 | PATCH | Ensure logging is configured | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -450,7 +450,7 @@
       - rule_4.2.2.2
       - notimplemented
 
-- name: "SCORED | 4.2.2.3 | PATCH | Ensure syslog-ng default file permissions configured"
+- name: "SCORED | 4.2.2.3 | PATCH | Ensure syslog-ng default file permissions configured | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -462,7 +462,7 @@
       - rule_4.2.2.3
       - notimplemented
 
-- name: "NOTSCORED | 4.2.2.4 | PATCH | Ensure syslog-ng is configured to send logs to a remote log host"
+- name: "NOTSCORED | 4.2.2.4 | PATCH | Ensure syslog-ng is configured to send logs to a remote log host | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
@@ -474,7 +474,7 @@
       - rule_4.2.2.4
       - notimplemented
 
-- name: "NOTSCORED | 4.2.2.5 | PATCH | Ensure remote syslog-ng messages are only accepted on designated log hosts"
+- name: "NOTSCORED | 4.2.2.5 | PATCH | Ensure remote syslog-ng messages are only accepted on designated log hosts | NOT IMPLEMENTED"
   command: /bin/true
   changed_when: no
   when:
